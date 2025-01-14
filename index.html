@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Online Shop</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+            background-color: #f4f4f9;
+        }
+        .container {
+            border: 2px solid #ddd;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #fff;
+            display: inline-block;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .message {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Buy abrars best seizemograph here!</h1>
+        <p>starting at $1k</p>
+        <button onclick="buySeismograph()">Buy Now</button>
+        <div class="message" id="message"></div>
+    </div>
+
+    <script>
+        let count = 0;
+
+        function buySeismograph() {
+            count++;
+            const message = document.getElementById('message');
+            message.textContent = `thanks for giving me ${count} thousand dollar${count > 1 ? 's' : ''}!`;
+        }
+    </script>
+</body>
+</html>
